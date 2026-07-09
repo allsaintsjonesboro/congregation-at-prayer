@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congregation at Prayer — Trinity +5 | July 5–11, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f4f0e8;
+    font-family: 'EB Garamond', Georgia, serif;
+    color: #1a1208;
+    min-height: 100vh;
+  }
+
+  .cap-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #faf7f2;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+  }
+
+  /* ── Header ── */
+  .cap-header {
+    background: #1a1a2e;
+    color: #e8e0cc;
+    padding: 1.6rem 1.5rem 1.3rem;
+    text-align: center;
+    border-bottom: 3px solid #8b1a1a;
+  }
+  .cap-header-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: #a89070;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .cap-header-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #e8e0cc;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+  .cap-header-season {
+    font-size: 16px;
+    color: #c4a882;
+    font-style: italic;
+    margin-bottom: 0.15rem;
+  }
+  .cap-header-dates {
+    font-size: 13px;
+    color: #a89070;
+  }
+
+  /* ── Rubric ── */
+  .cap-rubric {
+    background: #f0ebe0;
+    border-left: 3px solid #8b1a1a;
+    padding: 0.8rem 1.1rem;
+    font-style: italic;
+    font-size: 14px;
+    color: #4a3a28;
+    line-height: 1.55;
+  }
+
+  /* ── Accordion Sections ── */
+  .cap-section {
+    border-bottom: 1px solid #d6cfc0;
+  }
+
+  .cap-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    cursor: pointer;
+    background: #faf7f2;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s;
+  }
+  .cap-section-header:active { background: #f0ebe0; }
+
+  .cap-step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #e8e0cc;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cap-step-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #8b7355;
+    text-transform: uppercase;
+  }
+  .cap-step-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1208;
+    line-height: 1.2;
+  }
+
+  .cap-chevron {
+    margin-left: auto;
+    color: #8b7355;
+    font-size: 18px;
+    transition: transform 0.22s;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .cap-chevron.open { transform: rotate(180deg); }
+
+  .cap-body {
+    display: none;
+    padding: 0.25rem 1.25rem 1.25rem;
+    background: #faf7f2;
+  }
+  .cap-body.open { display: block; }
+
+  /* ── Typography inside sections ── */
+  .cap-prayer-text {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #1a1208;
+  }
+  .cap-prayer-text + .cap-prayer-text { margin-top: 0.75rem; }
+
+  .cap-divider {
+    border: none;
+    border-top: 1px solid #d6cfc0;
+    margin: 1rem 0;
+  }
+
+  .cap-rubric-inline {
+    font-size: 12px;
+    color: #8b1a1a;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    display: block;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.06em;
+  }
+
+  .cross { color: #8b1a1a; }
+
+  /* ── Verse ── */
+  .cap-verse-block {
+    background: #f0ebe0;
+    border-left: 3px solid #8b1a1a;
+    padding: 0.9rem 1rem;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.65;
+    color: #1a1208;
+  }
+  .cap-verse-ref {
+    font-size: 13px;
+    color: #5a4a38;
+    font-style: normal;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  /* ── Psalm note ── */
+  .cap-psalm-note {
+    font-size: 14px;
+    color: #4a3a28;
+    font-style: italic;
+    line-height: 1.65;
+    padding: 0.5rem 0;
+  }
+
+  /* ── Catechism ── */
+  .cap-catechism {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #1a1208;
+  }
+  .cap-catechism .question {
+    font-weight: 500;
+    margin-top: 0.85rem;
+  }
+  .cap-catechism .rubric-mark { color: #8b1a1a; }
+
+  .cap-notes-block {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: #1a1208;
+    border-top: 1px solid #d6cfc0;
+    padding-top: 0.9rem;
+    margin-top: 0.75rem;
+  }
+  .cap-notes-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: #8b1a1a;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .cap-notes-block p + p { margin-top: 0.75rem; }
+
+  /* ── Readings ── */
+  .day-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding: 0.6rem 0 0.75rem;
+    scrollbar-width: none;
+  }
+  .day-tabs::-webkit-scrollbar { display: none; }
+
+  .day-tab {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #c0b090;
+    background: transparent;
+    color: #5a4a38;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .day-tab.active {
+    background: #1a1a2e;
+    color: #e8e0cc;
+    border-color: #1a1a2e;
+  }
+
+  .day-reading-panel { display: none; padding-bottom: 0.25rem; }
+  .day-reading-panel.active { display: block; }
+
+  .cap-readings-feast {
+    font-size: 14.5px;
+    color: #1a1208;
+    line-height: 1.6;
+  }
+  .cap-readings-feast em {
+    font-style: italic;
+    color: #8b1a1a;
+    font-size: 12px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+  }
+  .cap-readings-daily {
+    font-size: 13px;
+    color: #4a3a28;
+    line-height: 1.55;
+    margin-top: 0.35rem;
+    font-style: italic;
+  }
+
+  /* ── Prayers ── */
+  .cap-prayer-day { margin-bottom: 0.85rem; }
+  .cap-prayer-day-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #8b1a1a;
+    margin-bottom: 0.15rem;
+    text-transform: uppercase;
+  }
+  .cap-prayer-day-text {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #1a1208;
+  }
+
+  /* ── Intercessions (FIXED: dark background, light text) ── */
+  .cap-intercessions {
+    background: #1a1a2e;
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    margin-top: 1rem;
+  }
+  .cap-intercessions-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: #c4a882;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .cap-intercessions-row {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #e8e0cc;
+    margin-bottom: 0.3rem;
+  }
+  .cap-intercessions-label {
+    color: #a89070;
+    font-style: italic;
+  }
+
+  /* ── Collect ── */
+  .cap-collect {
+    font-size: 16px;
+    line-height: 1.85;
+    font-style: italic;
+    color: #1a1208;
+    border-top: 1px solid #d6cfc0;
+    padding-top: 1rem;
+  }
+
+  /* ── Hymn ── */
+  .cap-hymn-header {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #8b1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .cap-hymn-stanza { margin-bottom: 1.1rem; }
+  .cap-hymn-num {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #8b1a1a;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  .cap-hymn-lines {
+    font-size: 15.5px;
+    line-height: 1.95;
+    color: #1a1208;
+  }
+  .cap-hymn-attr {
+    font-size: 12px;
+    color: #8b7355;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  /* ── Footer ── */
+  .cap-footer {
+    text-align: center;
+    padding: 1.5rem 1.25rem 2rem;
+    font-size: 12px;
+    color: #8b7355;
+    font-style: italic;
+    border-top: 1px solid #d6cfc0;
+  }
+  .cap-footer a { color: #8b1a1a; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="cap-wrap">
+
+  <div class="cap-header">
+    <div class="cap-header-eyebrow">All Saints Lutheran Church &amp; School — Jonesboro, AR</div>
+    <div class="cap-header-title">The Congregation at Prayer</div>
+    <div class="cap-header-season">Trinity +5</div>
+    <div class="cap-header-dates">July 5–11, 2026</div>
+  </div>
+
+  <div class="cap-rubric">Pray and confess out loud as much from the order of meditation and prayer as you are able, or as your family size and ages dictate. Learn by heart the verse, catechism, and hymn of the week.</div>
+
+  <!-- 1. Invocation -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">1</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Begin</div>
+        <div class="cap-step-title">Invocation</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <p class="cap-prayer-text" style="font-style:italic;color:#4a3a28;margin-bottom:0.6rem;">Bless yourself with the Holy Cross and say:</p>
+      <p class="cap-prayer-text">In the name of the Father and of the <span class="cross">&#10011;</span> Son and of the Holy Spirit. <em>Amen.</em></p>
+    </div>
+  </div>
+
+  <!-- 2. Apostles' Creed -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">2</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Confess</div>
+        <div class="cap-step-title">Apostles' Creed</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <p class="cap-prayer-text">I believe in God the Father Almighty, Maker of heaven and earth.</p>
+      <p class="cap-prayer-text">And in Jesus Christ, His only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried. He descended into hell. The third day He rose again from the dead. He ascended into heaven and sits at the right hand of God the Father Almighty. From thence He will come to judge the living and the dead.</p>
+      <p class="cap-prayer-text">I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life <span class="cross">&#10011;</span> everlasting. <em>Amen.</em></p>
+    </div>
+  </div>
+
+  <!-- 3. Our Father -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">3</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Pray</div>
+        <div class="cap-step-title">The Our Father</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <p class="cap-prayer-text">Our Father who art in heaven,<br>
+      hallowed be Thy name,<br>
+      Thy kingdom come,<br>
+      Thy will be done on earth as it is in heaven;<br>
+      give us this day our daily bread;<br>
+      and forgive us our trespasses as we forgive those who trespass against us;<br>
+      and lead us not into temptation,<br>
+      but deliver us <span class="cross">&#10011;</span> from evil.<br>
+      For Thine is the kingdom and the power and the glory forever and ever. <em>Amen.</em></p>
+    </div>
+  </div>
+
+  <!-- 4. Morning/Evening Prayer -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">4</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Pray</div>
+        <div class="cap-step-title">Morning or Evening Prayer</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <span class="cap-rubric-inline">Morning</span>
+      <p class="cap-prayer-text">I thank You, my heavenly Father, through Jesus Christ, Your dear Son, that You have kept me this night from all harm and danger; and I pray that you would keep me this day also from sin and every evil, that all my doings and life may please You. For into Your hands I commend myself, my body and soul, and all things. Let Your holy angel be with me, that the <span class="cross">&#10011;</span> evil foe may have no power over me. <em>Amen.</em></p>
+      <hr class="cap-divider">
+      <span class="cap-rubric-inline">Evening</span>
+      <p class="cap-prayer-text">I thank You, my heavenly Father, through Jesus Christ, Your dear Son, that You have graciously kept me this day; and I pray that You would forgive me all my sins where I have done wrong, and graciously keep me this night. For into Your hands I commend myself, my body and soul, and all things. Let Your holy angel be with me, that the <span class="cross">&#10011;</span> evil foe may have no power over me. <em>Amen.</em></p>
+    </div>
+  </div>
+
+  <!-- 5. Verse of the Week -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">5</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Learn</div>
+        <div class="cap-step-title">Verse of the Week</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <div class="cap-verse-block">
+        [Jesus said,] "It is the Spirit who gives life; the flesh profits nothing. The words that I speak to you are spirit, and they are life."
+        <span class="cap-verse-ref">— John 6:63</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Psalm -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">6</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Pray</div>
+        <div class="cap-step-title">Psalm of the Week — Psalm 101</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <p class="cap-psalm-note">Throughout this year of Congregation at Prayer, we will be praying the Psalms in canonical order. Please locate Psalm 101 in either your hymnal or Bible and join in praying this ancient hymn-prayer of the Church. If the Psalm is particularly long, consider splitting it and praying it over multiple days.</p>
+    </div>
+  </div>
+
+  <!-- 7. Catechism -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">7</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Learn</div>
+        <div class="cap-step-title">Catechism — The Fourth Petition</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <div class="cap-catechism">
+        <p><span class="cap-rubric-inline">The Our Father: Fourth Petition</span>
+        Give us this day our daily bread. <span class="rubric-mark">Pre&#10011;</span></p>
+
+        <p class="question">What does this mean? <span class="rubric-mark" style="font-weight:400">First Grade &#10011;</span></p>
+        <p>God certainly gives daily bread to everyone without our prayers, even to all evil people, but we pray in this petition that God would lead us to realize this and to receive our daily bread with thanksgiving.</p>
+
+        <p class="question">What is meant by daily bread? <span class="rubric-mark" style="font-weight:400">Second Grade &#10011;</span></p>
+        <p>Daily bread includes everything that has to do with the support and needs of the body, such as food, drink, clothing, shoes, house, home, land, animals, money, goods, a devout husband or wife, devout children, devout workers, devout and faithful rulers, good government, good weather, peace, health, self-control, good reputation, good friends, faithful neighbors, and the like.</p>
+      </div>
+
+      <div class="cap-notes-block">
+        <div class="cap-notes-title">Catechesis Notes</div>
+        <p>The Fourth Petition of the Lord's Prayer is what we might call a First Article petition. It asks for those things that we need for this body and life, those things we confess God gives us in the First Article of the Creed. The implication is clear: regardless of how hard we work, how much care we take, how well we handle our finances, in the end, it is God who gives us the things we need each day. If He were to withhold His gracious gifts, there would be nothing we could do to acquire them on our own. They are gifts. And we receive them from His loving hand.</p>
+        <p>Now, in His mercy and grace, God continues to pour out this daily bread on everyone, even without our prayers. He doesn't only give it to those who deserve it, for the reality is, none of us deserve anything good. But God is loving, and so we receive these gifts with thanksgiving. The trouble comes when we start to think that we're independent, that we don't need anyone else, that we can do it all on our own. We're prone to become arrogant and to think that it's all because of us that we have the things that we need. May God give us repentant hearts that we may recognize ourselves as creatures and Him as our creator and sustainer, that in all things we would give Him thanks.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Scripture Readings -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">8</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Read</div>
+        <div class="cap-step-title">Scripture Readings for the Week</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <div class="day-tabs">
+        <button class="day-tab active" onclick="switchDay(this,'sun')">Sun</button>
+        <button class="day-tab" onclick="switchDay(this,'mon')">Mon</button>
+        <button class="day-tab" onclick="switchDay(this,'tue')">Tue</button>
+        <button class="day-tab" onclick="switchDay(this,'wed')">Wed</button>
+        <button class="day-tab" onclick="switchDay(this,'thu')">Thu</button>
+        <button class="day-tab" onclick="switchDay(this,'fri')">Fri</button>
+        <button class="day-tab" onclick="switchDay(this,'sat')">Sat</button>
+      </div>
+      <div id="day-sun" class="day-reading-panel active">
+        <div class="cap-readings-feast"><em>Appointed:</em> 1 Kings 19:11–21 / 1 Peter 3:8–15a / Luke 5:1–11</div>
+      </div>
+      <div id="day-mon" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>Octave Sts. Peter &amp; Paul:</em> Sirach 44:10–15 / Matt. 14:22–33</div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 4:1–25 / 1 Sam. 17:1–58</div>
+      </div>
+      <div id="day-tue" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>Feria</em></div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 5:1–6:2 / 1 Sam. 18:1–21</div>
+      </div>
+      <div id="day-wed" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>St. Kilian:</em> Wisdom 3:1–8 / Matthew 5:1–12a</div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 6:12–18 / 1 Sam. 19:1–24</div>
+      </div>
+      <div id="day-thu" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>Feria</em></div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 7:1–25 / 1 Sam. 20:1–42</div>
+      </div>
+      <div id="day-fri" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>Fri. in Trinity 5:</em> James 2:14–17 / Luke 18:15–17</div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 2:1–29 / 1 Sam. 22:1–23</div>
+      </div>
+      <div id="day-sat" class="day-reading-panel">
+        <div class="cap-readings-feast"><em>Looking forward to Sunday:</em> Ex. 20:1–17 / Rom. 6:3–11 / Matthew 5:20–26</div>
+        <div class="cap-readings-daily"><em>Daily:</em> Rom. 13:1–7 / 1 Sam. 24:1–22</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Prayers -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">9</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Intercede</div>
+        <div class="cap-step-title">Prayer for Ourselves and Others</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Sunday</div><div class="cap-prayer-day-text">Pray for the joy of the resurrection among us; for the fruit of faith nourished by the Word and Sacraments.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Monday</div><div class="cap-prayer-day-text">Pray for faith to live in the promises of Holy Baptism; for one's calling and daily work; for the unemployed; for the salvation and well-being of our neighbors; for schools, colleges, and seminaries; for good government and for peace.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Tuesday</div><div class="cap-prayer-day-text">Pray for deliverance against temptation and evil; for the addicted and despairing, the tortured and oppressed; for those struggling with besetting sins.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Wednesday</div><div class="cap-prayer-day-text">Pray for marriage and family, that husbands and wives, parents and children live in ordered harmony according to the Word of God; for parents who must raise children alone; for our communities and neighborhoods.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Thursday</div><div class="cap-prayer-day-text">Pray for the Church and her pastors; for teachers, deacons, deaconesses, and other church workers; for missionaries and for all who serve the Church; for fruitful and salutary use of the blessed sacrament of Christ's body and blood.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Friday</div><div class="cap-prayer-day-text">Pray for the preaching of the holy cross of our Lord Jesus Christ and for the spread of His knowledge throughout the whole world; for the persecuted and oppressed; for the sick and dying.</div></div>
+      <div class="cap-prayer-day"><div class="cap-prayer-day-label">Saturday</div><div class="cap-prayer-day-text">Pray for faithfulness to the end; for the renewal of those who are withering in the faith or have fallen away; for receptive hearts and minds to God's Word on the Lord's Day; for pastors and people as they prepare to administer and receive Christ's holy gifts.</div></div>
+
+      <div class="cap-intercessions">
+        <div class="cap-intercessions-title">In our prayers this week</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS District: </span>Southeastern District</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">Partner Church: </span>Evangelical Lutheran Mission Diocese of Finland</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Missionaries: </span>Evangelical Lutheran Mission Diocese of Finland</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Education: </span>Evangelical Lutheran Mission Diocese of Finland</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">Sick &amp; Recovering: </span>Jocelyn Davey, Annette Teague (Z), Marge Utley (F)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Collect -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">10</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Pray</div>
+        <div class="cap-step-title">Collect of the Week</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <p class="cap-collect">O God, who hast prepared for them that love Thee such good things as eye has not seen, pour into our hearts such love toward Thee that we, loving Thee in all things and above all things, may obtain Thy promises, which exceed all that we can desire; through Jesus Christ our Lord. <em>Amen.</em></p>
+    </div>
+  </div>
+
+  <!-- 11. Hymn -->
+  <div class="cap-section">
+    <div class="cap-section-header" onclick="toggle(this)">
+      <div class="cap-step-num">11</div>
+      <div style="flex:1">
+        <div class="cap-step-label">Sing</div>
+        <div class="cap-step-title">Hymn of the Week</div>
+      </div>
+      <span class="cap-chevron">&#8964;</span>
+    </div>
+    <div class="cap-body">
+      <div class="cap-hymn-header">"Our Father, Who From Heaven Above" — LSB 766 (sts. 1, 5, 9)</div>
+      <div class="cap-hymn-stanza">
+        <div class="cap-hymn-num">Stanza 1</div>
+        <div class="cap-hymn-lines">
+          Our Father, who from heav'n above<br>
+          Bids all of us to live in love<br>
+          As members of one family<br>
+          And pray to You in unity,<br>
+          Teach us no thoughtless words to say<br>
+          But from our inmost hearts to pray.
+        </div>
+      </div>
+      <div class="cap-hymn-stanza">
+        <div class="cap-hymn-num">Stanza 5</div>
+        <div class="cap-hymn-lines">
+          Give us this day our daily bread,<br>
+          And let us all be clothed and fed.<br>
+          Save us from hardship, war, and strife;<br>
+          In plague and famine, spare our life,<br>
+          That we in honest peace may live,<br>
+          To care and greed no entrance give.
+        </div>
+      </div>
+      <div class="cap-hymn-stanza">
+        <div class="cap-hymn-num">Stanza 9</div>
+        <div class="cap-hymn-lines">
+          Amen, that is, so shall it be.<br>
+          Make strong our faith in You, that we<br>
+          May doubt not but with trust believe<br>
+          That what we ask we shall receive.<br>
+          Thus in Your name and at Your Word<br>
+          We say, "Amen, O hear us, Lord!"
+        </div>
+      </div>
+      <p class="cap-hymn-attr">Martin Luther, 1483–1546</p>
+    </div>
+  </div>
+
+  <div class="cap-footer">
+    All Saints Lutheran Church &amp; School &middot; Jonesboro, AR<br>
+    <a href="https://allsaintsjonesboro.org">allsaintsjonesboro.org</a>
+  </div>
+
+</div>
+<script>
+function toggle(header) {
+  var body = header.nextElementSibling;
+  var chevron = header.querySelector('.cap-chevron');
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+}
+function switchDay(tab, day) {
+  var tabs = tab.parentElement.querySelectorAll('.day-tab');
+  tabs.forEach(function(t){ t.classList.remove('active'); });
+  tab.classList.add('active');
+  document.querySelectorAll('.day-reading-panel').forEach(function(p){ p.classList.remove('active'); });
+  var panel = document.getElementById('day-' + day);
+  if (panel) panel.classList.add('active');
+}
+</script>
+</body>
+</html>
