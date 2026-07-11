@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Congregation at Prayer — Trinity +5 | July 5–11, 2026</title>
+<title>Congregation at Prayer — Trinity +6 | July 12–18, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -178,16 +178,36 @@
     padding: 0.5rem 0;
   }
 
+  /* ── Catechism ── */
   .cap-catechism {
     font-size: 15px;
     line-height: 1.85;
     color: #1a1208;
   }
-  .cap-catechism .question {
+  .cap-catechism p + p { margin-top: 0.85rem; }
+
+  /* Age-level badge */
+  .age-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #faf7f2;
+    background: #8b1a1a;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    top: -1px;
+  }
+
+  .cap-catechism .section-head {
     font-weight: 500;
     margin-top: 0.85rem;
   }
-  .cap-catechism .rubric-mark { color: #8b1a1a; }
 
   .cap-notes-block {
     font-size: 14.5px;
@@ -240,10 +260,7 @@
   .day-reading-panel { display: none; padding-bottom: 0.25rem; }
   .day-reading-panel.active { display: block; }
 
-  /* Reading entries */
-  .reading-entry {
-    margin-bottom: 0.85rem;
-  }
+  .reading-entry { margin-bottom: 0.85rem; }
   .reading-occasion {
     font-family: 'Cinzel', serif;
     font-size: 10px;
@@ -315,15 +332,17 @@
     font-style: italic;
   }
 
+  /* ── Collect — roman (not italic) ── */
   .cap-collect {
     font-size: 16px;
     line-height: 1.85;
-    font-style: italic;
+    font-style: normal;
     color: #1a1208;
     border-top: 1px solid #d6cfc0;
     padding-top: 1rem;
   }
 
+  /* ── Hymn ── */
   .cap-hymn-header {
     font-family: 'Cinzel', serif;
     font-size: 11px;
@@ -370,8 +389,8 @@
   <div class="cap-header">
     <div class="cap-header-eyebrow">All Saints Lutheran Church &amp; School — Jonesboro, AR</div>
     <div class="cap-header-title">The Congregation at Prayer</div>
-    <div class="cap-header-season">Trinity +5</div>
-    <div class="cap-header-dates">July 5–11, 2026</div>
+    <div class="cap-header-season">Trinity +6</div>
+    <div class="cap-header-dates">July 12–18, 2026</div>
   </div>
 
   <div class="cap-rubric">Pray and confess out loud as much from the order of meditation and prayer as you are able, or as your family size and ages dictate. Learn by heart the verse, catechism, and hymn of the week.</div>
@@ -463,8 +482,8 @@
     </div>
     <div class="cap-body">
       <div class="cap-verse-block">
-        [Jesus said,] "It is the Spirit who gives life; the flesh profits nothing. The words that I speak to you are spirit, and they are life."
-        <span class="cap-verse-ref">— John 6:63</span>
+        Those who gladly received his word were baptized… And they continued steadfastly in the apostles' doctrine and fellowship, in the breaking of the bread, and in prayers.
+        <span class="cap-verse-ref">— Acts 2:41a, 42</span>
       </div>
     </div>
   </div>
@@ -475,12 +494,12 @@
       <div class="cap-step-num">6</div>
       <div style="flex:1">
         <div class="cap-step-label">Pray</div>
-        <div class="cap-step-title">Psalm of the Week — Psalm 101</div>
+        <div class="cap-step-title">Psalm of the Week — Psalm 102</div>
       </div>
       <span class="cap-chevron">&#8964;</span>
     </div>
     <div class="cap-body">
-      <p class="cap-psalm-note">Throughout this year of Congregation at Prayer, we will be praying the Psalms in canonical order. Please locate Psalm 101 in either your hymnal or Bible and join in praying this ancient hymn-prayer of the Church. If the Psalm is particularly long, consider splitting it and praying it over multiple days.</p>
+      <p class="cap-psalm-note">Throughout this year of Congregation at Prayer, we will be praying the Psalms in canonical order. Please locate Psalm 102 in either your hymnal or Bible and join in praying this ancient hymn-prayer of the Church. If the Psalm is particularly long, consider splitting it and praying it over multiple days.</p>
     </div>
   </div>
 
@@ -490,23 +509,28 @@
       <div class="cap-step-num">7</div>
       <div style="flex:1">
         <div class="cap-step-label">Learn</div>
-        <div class="cap-step-title">Catechism — The Fourth Petition</div>
+        <div class="cap-step-title">Catechism — The First Petition</div>
       </div>
       <span class="cap-chevron">&#8964;</span>
     </div>
     <div class="cap-body">
       <div class="cap-catechism">
-        <p><span class="cap-rubric-inline">The Our Father: Fourth Petition</span>
-        Give us this day our daily bread. <span class="rubric-mark">Pre&#10011;</span></p>
-        <p class="question">What does this mean? <span class="rubric-mark" style="font-weight:400">First Grade &#10011;</span></p>
-        <p>God certainly gives daily bread to everyone without our prayers, even to all evil people, but we pray in this petition that God would lead us to realize this and to receive our daily bread with thanksgiving.</p>
-        <p class="question">What is meant by daily bread? <span class="rubric-mark" style="font-weight:400">Second Grade &#10011;</span></p>
-        <p>Daily bread includes everything that has to do with the support and needs of the body, such as food, drink, clothing, shoes, house, home, land, animals, money, goods, a devout husband or wife, devout children, devout workers, devout and faithful rulers, good government, good weather, peace, health, self-control, good reputation, good friends, faithful neighbors, and the like.</p>
+        <p><span class="cap-rubric-inline">The Our Father: First Petition</span></p>
+        <p>Hallowed be Thy name. <span class="age-badge">Preschool +</span></p>
+
+        <p class="section-head">What does this mean? <span class="age-badge">2nd Grade +</span></p>
+        <p>God's name is certainly holy in itself, but we pray in this petition that it may be kept holy among us also.</p>
+
+        <p class="section-head">How is God's name kept holy? <span class="age-badge">3rd Grade +</span></p>
+        <p>God's name is kept holy when the Word of God is taught in its truth and purity, and we, as the children of God, also lead holy lives according to it. Help us to do this, dear Father in heaven! But anyone who teaches or lives contrary to God's Word profanes the name of God among us. Protect us from this, heavenly Father!</p>
       </div>
+
       <div class="cap-notes-block">
         <div class="cap-notes-title">Catechesis Notes</div>
-        <p>The Fourth Petition of the Lord's Prayer is what we might call a First Article petition. It asks for those things that we need for this body and life, those things we confess God gives us in the First Article of the Creed. The implication is clear: regardless of how hard we work, how much care we take, how well we handle our finances, in the end, it is God who gives us the things we need each day. If He were to withhold His gracious gifts, there would be nothing we could do to acquire them on our own. They are gifts. And we receive them from His loving hand.</p>
-        <p>Now, in His mercy and grace, God continues to pour out this daily bread on everyone, even without our prayers. He doesn't only give it to those who deserve it, for the reality is, none of us deserve anything good. But God is loving, and so we receive these gifts with thanksgiving. The trouble comes when we start to think that we're independent, that we don't need anyone else, that we can do it all on our own. We're prone to become arrogant and to think that it's all because of us that we have the things that we need. May God give us repentant hearts that we may recognize ourselves as creatures and Him as our creator and sustainer, that in all things we would give Him thanks.</p>
+        <p>When you were baptized — whether that was a long, long time ago, or relatively recently — the triune name of God, Father, Son, and Holy Spirit, was joined to water, and through it, you were made a child of God.</p>
+        <p>Whenever God's name is attached to something, that thing is empowered with all the holiness of God: Baptism, Absolution, the Gospel, Holy Communion — the Divine Liturgy as a whole. God's name is holy because it's His name; we can't make it any more or less so.</p>
+        <p>However, we pray in this petition that God would strengthen us to keep His name holy among us also. That means using rightly the things to which God has attached His name. So when God's Word is taught in its truth and purity, when we hear it gladly and give thanks for His gifts, when we turn away from temptation and live according to God's good and gracious will — these are the ways that we keep God's name holy among us. Likewise, when we daily remember our baptism, confess our sins and receive the holy absolution, come regularly to hear the Gospel proclaimed, and receive the Eucharist often, God's name is kept holy among us. We pray in this petition that God in His mercy and grace would help us to do these things.</p>
+        <p>On the other hand, when we despise those things, God's name is profaned. When the Word of God is taught falsely and when we willingly listen to false doctrine, when we neglect the remembrance of our Baptism and the regular reception of the Means of Grace, when we use the freedom that we have in Christ to lead unholy lives — all of these things are a rejection of the holiness of God and the name He has placed on us in our Baptism. Indeed, they are a rejection of God Himself. We pray in this petition that God would protect us from this and preserve us in the one true faith.</p>
       </div>
     </div>
   </div>
@@ -536,29 +560,29 @@
         <div class="reading-entry">
           <div class="reading-occasion">Appointed</div>
           <div class="reading-refs">
-            <a href="https://www.biblegateway.com/passage/?search=1+Kings+19%3A11-21&version=NKJV" target="_blank">1 Kings 19:11–21</a>
+            <a href="https://www.biblegateway.com/passage/?search=Exodus+20%3A1-17&version=NKJV" target="_blank">Exodus 20:1–17</a>
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=1+Peter+3%3A8-15&version=NKJV" target="_blank">1 Peter 3:8–15a</a>
+            <a href="https://www.biblegateway.com/passage/?search=Romans+6%3A3-11&version=NKJV" target="_blank">Romans 6:3–11</a>
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Luke+5%3A1-11&version=NKJV" target="_blank">Luke 5:1–11</a>
+            <a href="https://www.biblegateway.com/passage/?search=Matthew+5%3A20-26&version=NKJV" target="_blank">Matthew 5:20–26</a>
           </div>
         </div>
       </div>
 
       <div id="day-mon" class="day-reading-panel">
         <div class="reading-entry">
-          <div class="reading-occasion">Octave Sts. Peter &amp; Paul</div>
+          <div class="reading-occasion">St. Margaret</div>
           <div class="reading-refs">
-            <a href="https://www.biblegateway.com/passage/?search=Sirach+44%3A10-15&version=NRSVA" target="_blank">Sirach 44:10–15</a>*
+            <a href="https://www.biblegateway.com/passage/?search=Sirach+51%3A9-12&version=NRSVA" target="_blank">Sirach 51:9–12</a>*
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Matthew+14%3A22-33&version=NKJV" target="_blank">Matt. 14:22–33</a>
+            <a href="https://www.biblegateway.com/passage/?search=Matthew+25%3A1-13&version=NKJV" target="_blank">Matt. 25:1–13</a>
           </div>
           <div class="reading-daily">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+4%3A1-25&version=NKJV" target="_blank">Rom. 4:1–25</a>
+              <a href="https://www.biblegateway.com/passage/?search=Romans+14%3A1-15%3A3&version=NKJV" target="_blank">Rom. 14:1–15:3</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+17%3A1-58&version=NKJV" target="_blank">1 Sam. 17:1–58</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+26%3A1-25&version=NKJV" target="_blank">1 Sam. 26:1–25</a>
             </div>
           </div>
         </div>
@@ -567,12 +591,12 @@
       <div id="day-tue" class="day-reading-panel">
         <div class="reading-entry">
           <div class="reading-occasion">Feria</div>
-          <div class="reading-daily" style="border-top:none; padding-top:0; margin-top:0;">
+          <div class="reading-daily" style="border-top:none;padding-top:0;margin-top:0;">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+5%3A1-6%3A2&version=NKJV" target="_blank">Rom. 5:1–6:2</a>
+              <a href="https://www.biblegateway.com/passage/?search=Romans+14%3A14-33&version=NKJV" target="_blank">Rom. 14:14–33</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+18%3A1-21&version=NKJV" target="_blank">1 Sam. 18:1–21</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+28%3A3-25&version=NKJV" target="_blank">1 Sam. 28:3–25</a>
             </div>
           </div>
         </div>
@@ -580,18 +604,18 @@
 
       <div id="day-wed" class="day-reading-panel">
         <div class="reading-entry">
-          <div class="reading-occasion">St. Kilian</div>
+          <div class="reading-occasion">Division of the Apostles</div>
           <div class="reading-refs">
-            <a href="https://www.biblegateway.com/passage/?search=Wisdom+3%3A1-8&version=NRSVA" target="_blank">Wisdom 3:1–8</a>*
+            <a href="https://www.biblegateway.com/passage/?search=Romans+10%3A10-18&version=NKJV" target="_blank">Rom. 10:10–18</a>
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Matthew+5%3A1-12&version=NKJV" target="_blank">Matt. 5:1–12a</a>
+            <a href="https://www.biblegateway.com/passage/?search=Mark+16%3A15-20&version=NKJV" target="_blank">Mark 16:15–20</a>
           </div>
           <div class="reading-daily">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+6%3A12-18&version=NKJV" target="_blank">Rom. 6:12–18</a>
+              <a href="https://www.biblegateway.com/passage/?search=Romans+16%3A1-27&version=NKJV" target="_blank">Rom. 16:1–27</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+19%3A1-24&version=NKJV" target="_blank">1 Sam. 19:1–24</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+31%3A1-13&version=NKJV" target="_blank">1 Sam. 31:1–13</a>
             </div>
           </div>
         </div>
@@ -600,12 +624,12 @@
       <div id="day-thu" class="day-reading-panel">
         <div class="reading-entry">
           <div class="reading-occasion">Feria</div>
-          <div class="reading-daily" style="border-top:none; padding-top:0; margin-top:0;">
+          <div class="reading-daily" style="border-top:none;padding-top:0;margin-top:0;">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+7%3A1-25&version=NKJV" target="_blank">Rom. 7:1–25</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+1%3A10-31&version=NKJV" target="_blank">1 Cor. 1:10–31</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+20%3A1-42&version=NKJV" target="_blank">1 Sam. 20:1–42</a>
+              <a href="https://www.biblegateway.com/passage/?search=2+Samuel+1%3A1-27&version=NKJV" target="_blank">2 Sam. 1:1–27</a>
             </div>
           </div>
         </div>
@@ -613,18 +637,18 @@
 
       <div id="day-fri" class="day-reading-panel">
         <div class="reading-entry">
-          <div class="reading-occasion">Fri. in Trinity 5</div>
+          <div class="reading-occasion">St. Alexius</div>
           <div class="reading-refs">
-            <a href="https://www.biblegateway.com/passage/?search=James+2%3A14-17&version=NKJV" target="_blank">James 2:14–17</a>
+            <a href="https://www.biblegateway.com/passage/?search=Sirach+45%3A1-5&version=NRSVA" target="_blank">Sirach 45:1b–5a</a>*
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Luke+18%3A15-17&version=NKJV" target="_blank">Luke 18:15–17</a>
+            <a href="https://www.biblegateway.com/passage/?search=Luke+14%3A26-33&version=NKJV" target="_blank">Luke 14:26–33</a>
           </div>
           <div class="reading-daily">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+2%3A1-29&version=NKJV" target="_blank">Rom. 2:1–29</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+2%3A1-16&version=NKJV" target="_blank">1 Cor. 2:1–16</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+22%3A1-23&version=NKJV" target="_blank">1 Sam. 22:1–23</a>
+              <a href="https://www.biblegateway.com/passage/?search=2+Samuel+5%3A1-25&version=NKJV" target="_blank">2 Sam. 5:1–25</a>
             </div>
           </div>
         </div>
@@ -634,24 +658,24 @@
         <div class="reading-entry">
           <div class="reading-occasion">Looking forward to Sunday</div>
           <div class="reading-refs">
-            <a href="https://www.biblegateway.com/passage/?search=Exodus+20%3A1-17&version=NKJV" target="_blank">Ex. 20:1–17</a>
+            <a href="https://www.biblegateway.com/passage/?search=Isaiah+62%3A6-12&version=NKJV" target="_blank">Isaiah 62:6–12</a>
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Romans+6%3A3-11&version=NKJV" target="_blank">Rom. 6:3–11</a>
+            <a href="https://www.biblegateway.com/passage/?search=Romans+6%3A19-23&version=NKJV" target="_blank">Rom. 6:19–23</a>
             <span class="sep">/</span>
-            <a href="https://www.biblegateway.com/passage/?search=Matthew+5%3A20-26&version=NKJV" target="_blank">Matt. 5:20–26</a>
+            <a href="https://www.biblegateway.com/passage/?search=Mark+8%3A1-9&version=NKJV" target="_blank">Mark 8:1–9</a>
           </div>
           <div class="reading-daily">
             <div class="reading-occasion">Daily Lectionary</div>
             <div class="reading-refs">
-              <a href="https://www.biblegateway.com/passage/?search=Romans+13%3A1-7&version=NKJV" target="_blank">Rom. 13:1–7</a>
+              <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+4%3A6-5%3A5&version=NKJV" target="_blank">1 Cor. 4:6–5:5</a>
               <span class="sep">/</span>
-              <a href="https://www.biblegateway.com/passage/?search=1+Samuel+24%3A1-22&version=NKJV" target="_blank">1 Sam. 24:1–22</a>
+              <a href="https://www.biblegateway.com/passage/?search=2+Samuel+6%3A1-23&version=NKJV" target="_blank">2 Sam. 6:1–23</a>
             </div>
           </div>
         </div>
       </div>
 
-      <p style="font-size:12px; color:#8b7355; font-style:italic; margin-top:0.75rem;">* Deuterocanonical readings linked to NRSVA, which includes these texts. All other readings link to NKJV.</p>
+      <p style="font-size:12px;color:#8b7355;font-style:italic;margin-top:0.75rem;">* Deuterocanonical readings linked to NRSVA. All other readings link to NKJV.</p>
     </div>
   </div>
 
@@ -675,10 +699,10 @@
       <div class="cap-prayer-day"><div class="cap-prayer-day-label">Saturday</div><div class="cap-prayer-day-text">Pray for faithfulness to the end; for the renewal of those who are withering in the faith or have fallen away; for receptive hearts and minds to God's Word on the Lord's Day; for pastors and people as they prepare to administer and receive Christ's holy gifts.</div></div>
       <div class="cap-intercessions">
         <div class="cap-intercessions-title">In our prayers this week</div>
-        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS District: </span>Southeastern District</div>
-        <div class="cap-intercessions-row"><span class="cap-intercessions-label">Partner Church: </span>Evangelical Lutheran Mission Diocese of Finland</div>
-        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Missionaries: </span>Evangelical Lutheran Mission Diocese of Finland</div>
-        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Education: </span>Evangelical Lutheran Mission Diocese of Finland</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS District: </span>Ohio District</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">Partner Church: </span>Evangelical Lutheran Church – Synod of France</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Missionaries: </span>The Lawson Family (Latvia); Rachel Krause (Germany)</div>
+        <div class="cap-intercessions-row"><span class="cap-intercessions-label">LCMS Education: </span>Concordia University–Chicago</div>
         <div class="cap-intercessions-row"><span class="cap-intercessions-label">Sick &amp; Recovering: </span>Jocelyn Davey, Annette Teague (Z), Marge Utley (F)</div>
       </div>
     </div>
@@ -695,7 +719,7 @@
       <span class="cap-chevron">&#8964;</span>
     </div>
     <div class="cap-body">
-      <p class="cap-collect">O God, who hast prepared for them that love Thee such good things as eye has not seen, pour into our hearts such love toward Thee that we, loving Thee in all things and above all things, may obtain Thy promises, which exceed all that we can desire; through Jesus Christ our Lord. <em>Amen.</em></p>
+      <p class="cap-collect">O God of hosts, to whom belong all good things, graft in our hearts the love of Thy name, and grant that by the increase within us of true religion Thou mayest nourish what is good, and by the zeal of devotion preserve what Thou hast nourished; through Jesus Christ our Lord. Amen.</p>
     </div>
   </div>
 
@@ -710,41 +734,47 @@
       <span class="cap-chevron">&#8964;</span>
     </div>
     <div class="cap-body">
-      <div class="cap-hymn-header">"Our Father, Who From Heaven Above" — LSB 766 (sts. 1, 5, 9)</div>
+      <div class="cap-hymn-header">"God's Own Child, I Gladly Say It" — LSB 594 (sts. 1, 2, 5)</div>
       <div class="cap-hymn-stanza">
         <div class="cap-hymn-num">Stanza 1</div>
         <div class="cap-hymn-lines">
-          Our Father, who from heav'n above<br>
-          Bids all of us to live in love<br>
-          As members of one family<br>
-          And pray to You in unity,<br>
-          Teach us no thoughtless words to say<br>
-          But from our inmost hearts to pray.
+          God's own child, I gladly say it:<br>
+          I am baptized into Christ!<br>
+          He, because I could not pay it,<br>
+          Gave my full redemption price.<br>
+          Do I need earth's treasures many?<br>
+          I have one worth more than any<br>
+          That brought me salvation free<br>
+          Lasting to eternity!
+        </div>
+      </div>
+      <div class="cap-hymn-stanza">
+        <div class="cap-hymn-num">Stanza 2</div>
+        <div class="cap-hymn-lines">
+          Sin, disturb my soul no longer:<br>
+          I am baptized into Christ!<br>
+          I have comfort even stronger:<br>
+          Jesus' cleansing sacrifice.<br>
+          Should a guilty conscience seize me<br>
+          Since my Baptism did release me<br>
+          In a dear forgiving flood,<br>
+          Sprinkling me with Jesus' blood?
         </div>
       </div>
       <div class="cap-hymn-stanza">
         <div class="cap-hymn-num">Stanza 5</div>
         <div class="cap-hymn-lines">
-          Give us this day our daily bread,<br>
-          And let us all be clothed and fed.<br>
-          Save us from hardship, war, and strife;<br>
-          In plague and famine, spare our life,<br>
-          That we in honest peace may live,<br>
-          To care and greed no entrance give.
+          There is nothing worth comparing<br>
+          To this lifelong comfort sure!<br>
+          Open-eyed my grave is staring:<br>
+          Even there I'll sleep secure.<br>
+          Though my flesh awaits its raising,<br>
+          Still my soul continues praising:<br>
+          I am baptized into Christ;<br>
+          I'm a child of paradise!
         </div>
       </div>
-      <div class="cap-hymn-stanza">
-        <div class="cap-hymn-num">Stanza 9</div>
-        <div class="cap-hymn-lines">
-          Amen, that is, so shall it be.<br>
-          Make strong our faith in You, that we<br>
-          May doubt not but with trust believe<br>
-          That what we ask we shall receive.<br>
-          Thus in Your name and at Your Word<br>
-          We say, "Amen, O hear us, Lord!"
-        </div>
-      </div>
-      <p class="cap-hymn-attr">Martin Luther, 1483–1546</p>
+      <p class="cap-hymn-attr">Erdmann Neumeister, 1671–1756</p>
     </div>
   </div>
 
